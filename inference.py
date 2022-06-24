@@ -16,7 +16,6 @@ s_imputer = pickle.load(open('s_imputer.pkl','rb'))
 scaler = pickle.load(open('scaler.pkl','rb'))
 
 def predict(df):
-    df = pd.read_csv(r"test.csv")
     df['ethnicity'] = ethnicity_encoder.transform(df['ethnicity'])
     df['gender'] = gender_encoder.transform(df['gender'])
     df['hospital_admit_source'] = hospital_admit_source_encoder.transform(df['hospital_admit_source'])
