@@ -52,6 +52,5 @@ def predict(df):
     numpy_array = df.to_numpy()
     predictions = model.predict(numpy_array)
     output = predictions.astype(int)
-    output = output.tolist()
-    output = [class_names[class_predicted] for class_predicted in predictions]
+    output = output.tolist(class_names)
     return output
