@@ -15,7 +15,7 @@ apache_3j_bodysystem_encoder = joblib.load(open('apache_3j_bodysystem_encoder.pk
 apache_2_bodysystem_encoder = joblib.load(open('apache_2_bodysystem_encoder.pkl', 'rb'))
 s_imputer = joblib.load(open('s_imputer.pkl','rb'))
 scaler = joblib.load(open('scaler.pkl','rb'))
-class_names = [1,0]
+class_names = [0,1]
 
 
 def predict(df):
@@ -52,5 +52,5 @@ def predict(df):
     numpy_array = df.to_numpy()
     predictions = model.predict(numpy_array)
     output = predictions.astype(int)
-    output = output.tolist(class_names)
+    output = output[class_names].tolist()
     return output
