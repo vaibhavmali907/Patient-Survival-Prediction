@@ -1,3 +1,4 @@
+Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
 protoc >= 3.19.0
 wandb==0.12.17
 protoc==3.20
