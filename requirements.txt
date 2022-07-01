@@ -1,6 +1,6 @@
 protoc >= 3.19.0
 wandb==0.12.17
-protobuf==3.20
+protoc==3.20
 keras==2.8.0
 Keras-Preprocessing==1.1.2
 keras-tuner==1.1.2
