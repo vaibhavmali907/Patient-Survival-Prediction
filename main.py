@@ -152,7 +152,7 @@ pickle.dump(scaler, open('scaler.pkl','wb'))
 
 # Adding layers to sequential model
 model = tf.keras.Sequential()
-model.add(Dense(16, input_shape = (182,), activation = 'relu'))
+model.add(Dense(16, input_shape = (182,)))
 model.add(Dense(12, activation = 'relu'))
 model.add(Dense(8, activation = 'relu'))
 model.add(Dense(4, activation = 'relu'))
